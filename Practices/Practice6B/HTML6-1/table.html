@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>HTML Practice 6 - Tables</title>
+
+        <style type="text/css">
+            .container {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .table {
+                width: 550px;
+                border: 1px solid black;
+                padding: 4px;
+            }
+            caption {
+                color: #030;
+            }
+            .colgroup-1 {
+                background-color: #cccccc;
+                width: 25%;
+            }
+            th:not(:first-child) {
+                border: 1px solid gray;
+                background-color: #9f6;
+            }
+            td {
+                border: 1px solid gray;
+                text-align: center;
+            }
+            th {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table class="table">
+                <caption>
+                    My Class Schedule
+                </caption>
+                <colgroup class="colgroup-1"></colgroup>
+                <tr>
+                    <th>Courses</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <td class="">INFO 1120</td>
+                    <td></td>
+                    <td>9-11</td>
+                    <td></td>
+                    <td>9-11</td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="">MATH 1010</td>
+                    <td colspan="4">12-1</td>
+                </tr>
+                <tr>
+                    <td class="">INFO 2420</td>
+                    <td colspan="5">Online Available 24/7</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
