@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rent a Pet - Graphics</title>
+
+        <style type="text/css">
+            body {
+                background-image: url("Images/2colback.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+            }
+            #thumbs,
+            #image {
+                width: 700px;
+                text-align: center;
+                margin: 0 auto 0 auto;
+                color: #000;
+                border: solid 1px #000;
+                background: #eee;
+                padding: 5px;
+            }
+
+            button {
+                margin-top: 2rem;
+                border: none;
+                border-top: 2px solid rgba(255, 255, 255, 0.5);
+                border-left: 2px solid rgba(255, 255, 255, 0.5);
+                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                padding: 10px 20px;
+                border-radius: 4px;
+                color: white;
+                font-weight: bold;
+                font-family: cursive;
+                cursor: pointer;
+                height: 50px;
+                font-size: 16px;
+                width: 200px;
+                background-color: aqua;
+            }
+
+            button:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                transition: all 0.2s ease;
+                background-color: rgb(0, 210, 210);
+            }
+
+            #thumbs {
+                margin-top: 10px;
+            }
+
+            #thumbs img {
+                border: solid 1px #000;
+                margin: 5px;
+            }
+
+            #image {
+                height: 400px;
+            }
+
+            .instructions {
+                font-style: italic;
+            }
+        </style>
+
+        <script language="JavaScript" type="text/javascript">
+            PrintButton1 = new Image();
+            PrintButton2 = new Image();
+            logo1 = new Image();
+            logo2 = new Image();
+            if (document.Images) {
+                PrintButton1.src = "images/print5.gif";
+                PrintButton2.src = "images/print6.gif";
+                logo1.src = "Images/logo.png";
+                logo2.src = "Images/logo.png";
+            }
+
+            var imgArray = new Array(
+                "Image1Lg.png",
+                "Image2Lg.png",
+                "Image3Lg.png",
+                "Image4Lg.png"
+            );
+
+            var titleArray = new Array(
+                "Fuzzy Cat",
+                "Dog & Cat",
+                "Two Hunting Dogs",
+                "German Sheperd on a fence"
+            );
+
+            var imgPath = "Images/Fullsize/";
+
+            function swapImage(imgID) {
+                var theImage = document.getElementById("theImage");
+                var textDiv = document.getElementById("bottomText");
+
+                var newImg;
+                var textTitle;
+
+                newImg = imgArray[imgID];
+                theImage.src = imgPath + newImg;
+
+                textTitle = titleArray[imgID];
+
+                textDiv.innerHTML = textTitle;
+            }
+
+            function preloadImages() {
+                for (var i = 0; i < imgArray.length; i++) {
+                    var tmpImg = new Image();
+                    tmpImg.src = imgPath + imgArray[i];
+                }
+            }
+
+            <!-- Begin comment for older browsers var imgArray = new Array( 'Image1Lg.png', 'Image2Lg.png', 'Image3Lg.png', 'Image4Lg.png' ); var titleArray = new Array( 'Fuzzy Cat', 'Dog & Cat', 'Two Hunting Dogs', 'German Sheperd on a fence' );
+            var imgPath = "Images/Fullsize/";
+            function swapImage(imgID) {
+                var theImage = document.getElementById("theImage");
+                var textDiv = document.getElementById("bottomText");
+                var newImg;
+                var textTitle;
+                newImg = imgArray[imgID];
+                theImage.src = imgPath + newImg;
+                textTitle = titleArray[imgID];
+                textDiv.innerHTML = textTitle;
+            }
+            function preloadImages() {
+                for (var i = 0; i < imgArray.length; i++) {
+                    var tmpImg = new Image();
+                    tmpImg.src = imgPath + imgArray[i];
+                }
+            } // End comment for older browsers -->
+        </script>
+    </head>
+    <body onload="preloadImages()">
+        <div align="center">
+            <div>
+                <a
+                    href=""
+                    onMouseOver="document.PrintButton.src=PrintButton2.src;"
+                    onMouseOut="document.PrintButton.src=PrintButton1.src;"
+                >
+                    <button class="">Print Page</button>
+                </a>
+            </div>
+
+            <div id="logo">
+                <a
+                    href="logo.html"
+                    onMouseOver="document.logo.src=logo.src;"
+                    onMouseOut="document.logo.src=logo.src;"
+                >
+                    <img
+                        src="Images/logo.png"
+                        width="133"
+                        height="126"
+                        name="logo"
+                        alt="logo"
+                        style="border: none"
+                    />
+                </a>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div id="thumbs">
+                <img
+                    src="Images/Thumbnails/Image1Sm.png"
+                    alt="Fuzzy Cat"
+                    onmouseover="swapImage(0);"
+                />
+                <img
+                    src="Images/Thumbnails/Image2Sm.png"
+                    alt="Dog and Cat"
+                    onmouseover="swapImage(1);"
+                />
+                <img
+                    src="Images/Thumbnails/Image3Sm.png"
+                    alt="Hunting Dogs"
+                    onmouseover="swapImage(2);"
+                />
+                <img
+                    src="Images/Thumbnails/Image4Sm.png"
+                    alt="German Sheperd on a fence"
+                    onmouseover="swapImage(3);"
+                />
+            </div>
+
+            <div id="image">
+                <img
+                    id="theImage"
+                    src="Images/FullSize/Image1Lg.png"
+                    alt="Fuzzy Cat"
+                />
+                <h3 id="bottomText">Fuzzy Cat</h3>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <p>
+            <a href="http://validator.w3.org/check?uri=referer"
+                ><img
+                    src="http://www.w3.org/Icons/valid-xhtml10"
+                    alt="Valid XHTML 1.0 Transitional"
+                    height="31"
+                    width="88"
+            /></a>
+        </p>
+    </body>
+</html>
