@@ -31,7 +31,13 @@ washing out a color.&nbsp; </p>
 
 <br>
 <h2>Image Map Example</h2>
-<p><img alt='map gif' src="Images/map.gif" id="Map" width="275" height="289" /></p>
+<p><img src="Images/map.gif" alt='imagemap' width="275" height="289" usemap="#MapMap" id="Map" />
+  <map name="MapMap">
+    <area shape="circle" coords="93,113,28" href="circle.html" alt="link to circle.html">
+    <area shape="rect" coords="150,37,223,111" href="rectangle.html" alt="link to rectangle.html">
+    <area shape="poly" coords="188,187,188,187,221,204,221,204,192,217,192,216,175,249,175,249,157,220,157,220,127,204,127,204,165,186,165,186,174,157" href="polygon.html" alt="link to polygon.html">
+  </map>
+</p>
 
 
 

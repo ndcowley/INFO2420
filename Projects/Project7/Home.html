@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rent a Pet</title>
+		<link rel="stylesheet" href="mystyles.css" />
+    <script type="text/javascript" src="myscripts.js"></script>
+    </head>
+
+    <body onload="preloadImages()">
+	<header>
+        <img src="Images/logo.png" alt="logo image" />
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Tributes</a></li>
+					<li><a href="#">Survey</a></li>
+					<li><a href="#">Favorites</a></li>
+				</ul>
+			</nav>
+    	</header>
+        <img class="banner_img" alt="banner" src="Images/banner.png" />
+		<section class="section">
+			<article>
+                <h1>Welcome to Rent a Pet</h1>
+                <p>At Rent a Pet, we understand that not everyone can commit to owning a pet full-time, but many still crave the companionship and joy that animals bring to our lives. Our unique service allows you to experience the benefits of pet companionship without the long-term responsibility.</p>
+                <p>Whether you're looking for a walking buddy, a temporary companion during a difficult time, or simply want to brighten your day with some animal affection, we have the perfect pet for you. All our animals are well-trained, sociable, and ready to provide the comfort and happiness you seek.</p>
+                <p>Our team carefully matches each client with the right pet based on your preferences, living situation, and specific needs. We offer flexible rental periods, from a few hours to several days, giving you the freedom to enjoy pet companionship on your terms.</p>
+                
+                <h2>Our Featured Pets</h2>
+                <div class="thumbnail-gallery">
+                    <img src="Images/Thumbnails/Image1Sm.jpg" alt="Thumbnail 1" class="thumbnail" onclick="showImage('Images/Fullsize/Image1Lg.png')" />
+                    <img src="Images/Thumbnails/Image2Sm.jpg" alt="Thumbnail 2" class="thumbnail" onclick="showImage('Images/Fullsize/Image2Lg.png')" />
+                    <img src="Images/Thumbnails/Image3Sm.jpg" alt="Thumbnail 3" class="thumbnail" onclick="showImage('Images/Fullsize/Image3Lg.png')" />
+                    <img src="Images/Thumbnails/Image4Sm.jpg" alt="Thumbnail 4" class="thumbnail" onclick="showImage('Images/Fullsize/Image4Lg.png')" />
+                    <div class="fullsize-container">
+                        <img id="fullsize" src="Images/Fullsize/Image1Lg.png" alt="Full size image" />
+                    </div>
+                </div>
+                
+                <h2>Pet Tribute: Max the Therapy Dog</h2>
+                <div class="mini-tribute">
+                    <img src="Images/Fullsize/Image4Lg.png" alt="Max the Therapy Dog" class="tribute-img" />
+                    <p>Max joined our Rent a Pet family three years ago and has quickly become one of our most requested companions. This gentle Golden Retriever has brought comfort to hundreds of clients, from elderly residents in nursing homes to stressed college students during finals week. His calm demeanor and intuitive understanding of human emotions make him the perfect therapy dog... <a href="#">more >></a></p>
+                </div>
+            </article>
+			<footer>
+			<div class="footer-content">
+				<p>This web site has been created solely for educational purposes.</p>
+				<p>Contact: <a href="mailto:10720835@uvu.edu">10720835@uvu.edu</a></p>
+			</div>
+		</footer>
+		</section>
+		
+    </body>
+</html>
